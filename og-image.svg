@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <radialGradient id="glow" cx="82%" cy="15%" r="70%">
+      <stop offset="0" stop-color="#31462d"/>
+      <stop offset="1" stop-color="#111514"/>
+    </radialGradient>
+    <pattern id="grid" width="28" height="28" patternUnits="userSpaceOnUse">
+      <circle cx="1" cy="1" r="1" fill="#d9e3d6" opacity=".14"/>
+    </pattern>
+  </defs>
+  <rect width="1200" height="630" fill="url(#glow)"/>
+  <rect width="1200" height="630" fill="url(#grid)" opacity=".42"/>
+  <circle cx="950" cy="310" r="230" fill="none" stroke="#c1fa78" stroke-opacity=".22"/>
+  <ellipse cx="950" cy="310" rx="140" ry="250" fill="none" stroke="#ed9b6b" stroke-opacity=".28" transform="rotate(42 950 310)"/>
+  <circle cx="950" cy="310" r="104" fill="#1b241e" stroke="#c1fa78" stroke-opacity=".7"/>
+  <text x="950" y="326" fill="#c1fa78" font-family="Arial, Helvetica, sans-serif" font-size="82" font-weight="700" letter-spacing="-12" text-anchor="middle">DS</text>
+  <text x="91" y="118" fill="#c1fa78" font-family="monospace" font-size="19" letter-spacing="3">SOFTWARE · DATA · APPLIED AI</text>
+  <text x="86" y="294" fill="#f0f1eb" font-family="Arial, Helvetica, sans-serif" font-size="82" font-weight="500" letter-spacing="-5">Daniel Samoei</text>
+  <text x="91" y="360" fill="#c1fa78" font-family="Arial, Helvetica, sans-serif" font-size="42" font-weight="500" letter-spacing="-1">Building useful technology</text>
+  <text x="91" y="415" fill="#c1fa78" font-family="Arial, Helvetica, sans-serif" font-size="42" font-weight="500" letter-spacing="-1">for real-world work.</text>
+  <path d="M92 518h1016" stroke="#71806f" stroke-opacity=".55"/>
+  <text x="92" y="560" fill="#abb5ad" font-family="monospace" font-size="17" letter-spacing="2">FULL-STACK ENGINEERING / ANALYTICS / AI SYSTEMS</text>
+</svg>
