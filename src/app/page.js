@@ -115,6 +115,21 @@ const projects = [
     repository: "https://github.com/Cheseny1996/elliotsglobal-marketplace",
     demo: "https://elliotsglobal-marketplace.vercel.app",
   },
+  {
+    number: "09",
+    status: "Built & deployed",
+    statusType: "built",
+    title: "Mzima Wells Studios",
+    category: "Creative platform & commerce",
+    summary:
+      "A public-facing creative studio platform with a managed shop, interactive product pages, cart and checkout, and Jishindie challenge publishing.",
+    approach:
+      "Built with Next.js, React, TypeScript, and MongoDB. Delivered staff administration, product and challenge management, an M-Pesa checkout integration, and a responsive public experience deployed on Vercel.",
+    stack: ["Next.js", "React", "TypeScript", "MongoDB", "M-Pesa"],
+    visual: "workspace",
+    repository: "https://github.com/Cheseny1996/mw-studios",
+    demo: "https://mw-studios.vercel.app",
+  },
 ];
 
 const skillGroups = [
