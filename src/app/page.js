@@ -97,6 +97,21 @@ const projects = [
     stack: ["Python", "API testing", "CI/CD", "Model evaluation"],
     visual: "quality",
   },
+  {
+    number: "08",
+    status: "Preview ready",
+    statusType: "prototype",
+    title: "Elliot’s Global Marketplace",
+    category: "Full-stack commerce",
+    summary:
+      "A warm, multi-vendor storefront with 36 sample products across 12 departments and dedicated client, vendor, and admin journeys.",
+    approach:
+      "Built with Next.js, MongoDB, and Stripe integration points. Vendor approval, product review, saved finds, cart, and admin workflows are implemented; live accounts and payments need production service configuration.",
+    stack: ["Next.js", "React", "TypeScript", "MongoDB", "Stripe"],
+    visual: "workspace",
+    repository: "https://github.com/Cheseny1996/elliotsglobal-marketplace",
+    demo: "https://elliotsglobal-marketplace.vercel.app",
+  },
 ];
 
 const skillGroups = [
@@ -370,8 +385,8 @@ export default function Home() {
               <h2 id="work-title">Built, tested, and <span>still curious.</span></h2>
             </div>
             <p className="section-aside">
-              Real repositories and clearly labeled concepts. No invented
-              deployments or client work.
+              Real repositories, working previews, and clearly labeled
+              concepts. No invented deployments or client work.
             </p>
           </div>
           <div className="project-grid">
@@ -391,20 +406,27 @@ export default function Home() {
                   <ul className="tag-list" aria-label={`${project.title} technologies`}>
                     {project.stack.map((item) => <li key={item}>{item}</li>)}
                   </ul>
-                  {project.repository ? (
-                    <ExternalLink
-                      className="project-link"
-                      href={project.repository}
-                    >
-                      View repository <span aria-hidden="true">↗</span>
-                    </ExternalLink>
-                  ) : (
-                    <span className="project-link project-link--muted">
-                      {project.statusType === "planned"
-                        ? "Project concept · not yet built"
-                        : "Prototype · public repository to be added"}
-                    </span>
-                  )}
+                  <div className="project-actions">
+                    {project.demo && (
+                      <ExternalLink className="project-link" href={project.demo}>
+                        Open preview <span aria-hidden="true">↗</span>
+                      </ExternalLink>
+                    )}
+                    {project.repository ? (
+                      <ExternalLink
+                        className="project-link project-link--secondary"
+                        href={project.repository}
+                      >
+                        View repository <span aria-hidden="true">↗</span>
+                      </ExternalLink>
+                    ) : (
+                      <span className="project-link project-link--muted">
+                        {project.statusType === "planned"
+                          ? "Project concept · not yet built"
+                          : "Prototype · public repository to be added"}
+                      </span>
+                    )}
+                  </div>
                 </div>
               </article>
             ))}
