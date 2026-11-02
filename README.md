@@ -1,23 +1,20 @@
 # Daniel Samoei — Developer Portfolio
 
-A fast, accessible personal portfolio for Daniel Samoei, built with Next.js and
-React and exported as a static site for GitHub Pages. The portfolio highlights
-software engineering, data and business intelligence, and applied AI work.
+A fast, accessible personal portfolio built with Next.js and React and exported
+as a static site for GitHub Pages. It highlights software engineering, data and
+business intelligence, and applied AI work.
 
 ## What is included
 
 - Responsive single-page portfolio with working section navigation.
-- Verified links to public project repositories; prototypes and planned work
-  are labeled separately.
+- Verified links to public project repositories and live previews; prototypes
+  and planned work are labeled separately.
 - Interactive, keyboard-accessible skill groups and a mobile navigation menu.
 - SEO, canonical URL, Open Graph and Twitter metadata, a social preview image,
   sitemap, and robots file.
 - GitHub Actions workflow to build and deploy the static export to GitHub Pages.
 - Direct email, GitHub, and LinkedIn contact links. A contact form is omitted
   until a secure backend or trusted form provider is configured.
-
-The project diagrams are illustrative, not screenshots of deployed products.
-No live application demos or production deployments are claimed.
 
 ## Run locally
 
@@ -41,33 +38,22 @@ npm run build
 
 ## Publish to GitHub Pages
 
+The existing public repository is
+[cheseny1996/cheseny1996.github.io](https://github.com/Cheseny1996/cheseny1996.github.io).
 The workflow in `.github/workflows/deploy.yml` builds and deploys on each push
-to `main`.
+to `main`; do not recreate or force-push over this repository. In repository
+settings, set **Pages → Build and deployment → Source** to **GitHub Actions**,
+then verify the workflow in the **Actions** tab. The site is served at
+[https://cheseny1996.github.io](https://cheseny1996.github.io).
 
-1. Check your GitHub account for an existing repository named
-   `cheseny1996.github.io`. Do not replace an existing repository without
-   reviewing its contents and confirming that is what you want.
-2. If the repository does not exist, create a **new public repository** named
-   `cheseny1996.github.io`. Do not initialize it with a README or other files.
-3. From this project directory, initialize and push the project:
+## Featured marketplace
 
-   ```bash
-   git init -b main
-   git add .
-   git commit -m "Build Daniel Samoei portfolio"
-   git remote add origin https://github.com/cheseny1996/cheseny1996.github.io.git
-   git push -u origin main
-   ```
-
-4. In the repository, open **Settings → Pages** and set the build and
-   deployment source to **GitHub Actions**.
-5. Check the **Actions** tab for the deployment workflow. After it succeeds,
-   the site will be available at
-   [https://cheseny1996.github.io](https://cheseny1996.github.io).
-
-The public account currently has no repository with that Pages name. Verify
-again before creating or pushing, since the repository may be private or may
-have changed.
+Elliot's Global Marketplace is available at
+[elliotsglobal-marketplace.vercel.app](https://elliotsglobal-marketplace.vercel.app/)
+and its source is in the public
+[elliotsglobal-marketplace repository](https://github.com/Cheseny1996/elliotsglobal-marketplace).
+The storefront and sample catalog are public. MongoDB-backed accounts and
+Stripe payments need service configuration before they can be used live.
 
 ## Content maintenance
 
