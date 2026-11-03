@@ -4,6 +4,42 @@ import MobileNav from "./mobile-nav";
 
 const projects = [
   {
+    number: "09",
+    status: "Built & deployed",
+    statusType: "built",
+    title: "Mzima Wells Studios",
+    category: "Creative platform & commerce",
+    summary:
+      "A public-facing creative studio platform with a managed shop, interactive product pages, cart and checkout, and Jishindie challenge publishing.",
+    approach:
+      "Built with Next.js, React, TypeScript, and MongoDB. Delivered staff administration, product and challenge management, an M-Pesa checkout integration, and a responsive public experience deployed on Vercel.",
+    stack: ["Next.js", "React", "TypeScript", "MongoDB", "M-Pesa"],
+    visual: "workspace",
+    image: "/projects/mzima-wells-studios-shot.png",
+    imageAlt: "Homepage screenshot of Mzima Wells Studios, showing its creative studio storefront and navigation",
+    imageLabel: "LIVE SITE / CREATIVE STUDIO",
+    repository: "https://github.com/Cheseny1996/mw-studios",
+    demo: "https://mw-studios.vercel.app",
+  },
+  {
+    number: "08",
+    status: "Built & deployed",
+    statusType: "built",
+    title: "Elliot’s Global Marketplace",
+    category: "Full-stack commerce",
+    summary:
+      "A warm, interactive multi-vendor marketplace with a live storefront, secure account journeys, cart, password recovery, and role-based client, vendor, and admin experiences.",
+    approach:
+      "Built with Next.js, React, TypeScript, MongoDB, Resend, and Stripe integration points. Implemented product discovery and detail views, sharing, saved finds, persistent cart, secure registration, email-based password reset, seller applications and approvals, product review, order flows, an original responsive logo, and production deployment on GitHub and Vercel.",
+    stack: ["Next.js", "React", "TypeScript", "MongoDB", "Stripe"],
+    visual: "workspace",
+    image: "/projects/elliots-global-marketplace-shot.png",
+    imageAlt: "Homepage screenshot of Elliot's Global Marketplace, showing its storefront, product categories, and featured campaigns",
+    imageLabel: "LIVE SITE / STOREFRONT",
+    repository: "https://github.com/Cheseny1996/elliotsglobal-marketplace",
+    demo: "https://elliotsglobal-marketplace.vercel.app",
+  },
+  {
     number: "01",
     status: "Built",
     statusType: "built",
@@ -192,42 +228,6 @@ const projects = [
       ],
     },
     repository: "https://github.com/Cheseny1996/quality-evaluation-workbench",
-  },
-  {
-    number: "08",
-    status: "Built & deployed",
-    statusType: "built",
-    title: "Elliot’s Global Marketplace",
-    category: "Full-stack commerce",
-    summary:
-      "A warm, interactive multi-vendor marketplace with a live storefront, secure account journeys, cart, password recovery, and role-based client, vendor, and admin experiences.",
-    approach:
-      "Built with Next.js, React, TypeScript, MongoDB, Resend, and Stripe integration points. Implemented product discovery and detail views, sharing, saved finds, persistent cart, secure registration, email-based password reset, seller applications and approvals, product review, order flows, an original responsive logo, and production deployment on GitHub and Vercel.",
-    stack: ["Next.js", "React", "TypeScript", "MongoDB", "Stripe"],
-    visual: "workspace",
-    image: "/projects/elliots-global-marketplace-shot.png",
-    imageAlt: "Homepage screenshot of Elliot's Global Marketplace, showing its storefront, product categories, and featured campaigns",
-    imageLabel: "LIVE SITE / STOREFRONT",
-    repository: "https://github.com/Cheseny1996/elliotsglobal-marketplace",
-    demo: "https://elliotsglobal-marketplace.vercel.app",
-  },
-  {
-    number: "09",
-    status: "Built & deployed",
-    statusType: "built",
-    title: "Mzima Wells Studios",
-    category: "Creative platform & commerce",
-    summary:
-      "A public-facing creative studio platform with a managed shop, interactive product pages, cart and checkout, and Jishindie challenge publishing.",
-    approach:
-      "Built with Next.js, React, TypeScript, and MongoDB. Delivered staff administration, product and challenge management, an M-Pesa checkout integration, and a responsive public experience deployed on Vercel.",
-    stack: ["Next.js", "React", "TypeScript", "MongoDB", "M-Pesa"],
-    visual: "workspace",
-    image: "/projects/mzima-wells-studios-shot.png",
-    imageAlt: "Homepage screenshot of Mzima Wells Studios, showing its creative studio storefront and navigation",
-    imageLabel: "LIVE SITE / CREATIVE STUDIO",
-    repository: "https://github.com/Cheseny1996/mw-studios",
-    demo: "https://mw-studios.vercel.app",
   },
 ];
 
@@ -749,7 +749,10 @@ export default function Home() {
                   </div>
                   <h3>{project.title}</h3>
                   <p className="project-summary">{project.summary}</p>
-                  <p className="project-approach">{project.approach}</p>
+                  <details className="project-details">
+                    <summary>Project details</summary>
+                    <p className="project-approach">{project.approach}</p>
+                  </details>
                   <ul className="tag-list" aria-label={`${project.title} technologies`}>
                     {project.stack.map((item) => <li key={item}>{item}</li>)}
                   </ul>

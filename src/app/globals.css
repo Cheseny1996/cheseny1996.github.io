@@ -614,8 +614,8 @@ summary:focus-visible {
 
 .project-grid {
   display: grid;
-  gap: 18px;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
 .project-card {
@@ -1210,7 +1210,7 @@ summary:focus-visible {
   display: flex;
   flex: 1;
   flex-direction: column;
-  padding: clamp(20px, 2.5vw, 31px);
+  padding: clamp(16px, 1.7vw, 23px);
 }
 
 .project-meta {
@@ -1262,26 +1262,52 @@ summary:focus-visible {
 }
 
 .project-content h3 {
-  font-size: clamp(1.28rem, 2vw, 1.7rem);
+  font-size: clamp(1.16rem, 1.45vw, 1.45rem);
   font-weight: 500;
   letter-spacing: -0.05em;
   line-height: 1.2;
-  margin: 19px 0 10px;
+  margin: 14px 0 8px;
 }
 
 .project-summary {
   color: #c1c9c0;
-  font-size: 0.83rem;
-  line-height: 1.65;
+  font-size: 0.77rem;
+  line-height: 1.55;
   margin: 0;
   max-width: 540px;
 }
 
+.project-details {
+  margin-top: 10px;
+}
+
+.project-details summary {
+  color: #b6c1b6;
+  cursor: pointer;
+  font-family: var(--font-mono);
+  font-size: 0.56rem;
+  list-style: none;
+  width: fit-content;
+}
+
+.project-details summary::-webkit-details-marker {
+  display: none;
+}
+
+.project-details summary::after {
+  color: var(--accent);
+  content: " +";
+}
+
+.project-details[open] summary::after {
+  content: " −";
+}
+
 .project-approach {
   color: #8f9a91;
-  font-size: 0.73rem;
-  line-height: 1.75;
-  margin: 13px 0 0;
+  font-size: 0.7rem;
+  line-height: 1.65;
+  margin: 9px 0 0;
 }
 
 .tag-list {
@@ -1289,7 +1315,7 @@ summary:focus-visible {
   flex-wrap: wrap;
   gap: 7px;
   list-style: none;
-  margin: 19px 0 21px;
+  margin: 13px 0 16px;
   padding: 0;
 }
 
@@ -1773,6 +1799,10 @@ summary:focus-visible {
 
   .section-aside {
     max-width: 230px;
+  }
+
+  .project-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .visual-disclaimer {
