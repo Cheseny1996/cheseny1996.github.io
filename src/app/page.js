@@ -112,6 +112,9 @@ const projects = [
       "Built with Next.js, React, TypeScript, MongoDB, Resend, and Stripe integration points. Implemented product discovery and detail views, sharing, saved finds, persistent cart, secure registration, email-based password reset, seller applications and approvals, product review, order flows, an original responsive logo, and production deployment on GitHub and Vercel.",
     stack: ["Next.js", "React", "TypeScript", "MongoDB", "Stripe"],
     visual: "workspace",
+    image: "/projects/elliots-global-marketplace-shot.png",
+    imageAlt: "Homepage screenshot of Elliot's Global Marketplace, showing its storefront, product categories, and featured campaigns",
+    imageLabel: "LIVE SITE / STOREFRONT",
     repository: "https://github.com/Cheseny1996/elliotsglobal-marketplace",
     demo: "https://elliotsglobal-marketplace.vercel.app",
   },
@@ -127,6 +130,9 @@ const projects = [
       "Built with Next.js, React, TypeScript, and MongoDB. Delivered staff administration, product and challenge management, an M-Pesa checkout integration, and a responsive public experience deployed on Vercel.",
     stack: ["Next.js", "React", "TypeScript", "MongoDB", "M-Pesa"],
     visual: "workspace",
+    image: "/projects/mzima-wells-studios-shot.png",
+    imageAlt: "Homepage screenshot of Mzima Wells Studios, showing its creative studio storefront and navigation",
+    imageLabel: "LIVE SITE / CREATIVE STUDIO",
     repository: "https://github.com/Cheseny1996/mw-studios",
     demo: "https://mw-studios.vercel.app",
   },
@@ -134,44 +140,116 @@ const projects = [
 
 const skillGroups = [
   {
-    name: "Frontend",
-    skills: ["JavaScript", "TypeScript", "React", "Next.js", "Tailwind CSS", "Accessible UI"],
+    name: "Programming & software",
+    skills: ["Python", "C++", "JavaScript", "TypeScript", "Go", "SQL", "MATLAB", "Node.js", "React", "Next.js", "REST APIs"],
   },
   {
-    name: "Backend & APIs",
-    skills: ["Python", "Go", "Node.js", "FastAPI", "Django", "Express", "REST APIs"],
+    name: "Testing, review & AI evaluation",
+    skills: ["pytest", "Selenium", "Unit & integration testing", "Debugging", "Test automation", "Code review", "AI output evaluation & rating", "OpenAI & Claude APIs", "Prompt engineering", "Error-pattern analysis", "Model validation"],
   },
   {
-    name: "Go & distributed systems",
-    skills: ["Go", "Concurrency", "Distributed systems", "System design"],
-  },
-  {
-    name: "Databases",
-    skills: ["PostgreSQL", "MongoDB", "Supabase", "Firebase", "SQL"],
+    name: "Machine learning & analytics",
+    skills: ["TensorFlow", "PyTorch", "PCA", "PLSR", "Neural networks", "Anomaly detection", "Feature engineering", "Recommendation systems", "Propensity models", "Power BI", "Tableau", "Excel"],
   },
   {
     name: "Data engineering",
-    skills: ["Pandas", "NumPy", "Data validation", "Pipeline design"],
+    skills: ["Pandas", "PySpark", "Databricks", "ETL", "Apache Airflow", "Data validation", "Pipeline design"],
   },
   {
-    name: "Analytics & BI",
-    skills: ["Power BI", "Tableau", "Excel", "Metric design", "Reporting"],
+    name: "Cloud, systems & delivery",
+    skills: ["AWS (S3, EC2, EKS, RDS, CloudWatch)", "Terraform", "Docker", "Kubernetes", "ArgoCD", "Prometheus", "Grafana", "Git", "GitHub Actions", "CI/CD", "Concurrency", "Distributed systems"],
   },
   {
-    name: "AI & machine learning",
-    skills: ["PyTorch", "TensorFlow", "Hugging Face", "LLMs", "RAG", "AI code review", "AI output evaluation"],
+    name: "Physics & signal processing",
+    skills: ["ECG/PPG time series", "Spectral analysis", "LIBS", "Raman spectroscopy", "Optics & photonics", "OptiSystem", "Statistical & numerical modeling"],
   },
   {
-    name: "Cloud & DevOps",
-    skills: ["AWS", "Azure", "Docker", "Kubernetes", "Git", "GitHub Actions", "CI/CD"],
+    name: "Product engineering",
+    skills: ["TypeScript", "React", "Node.js", "Go", "MongoDB", "PostgreSQL", "Supabase", "Firebase", "Stripe", "M-Pesa", "Accessible UI", "System design"],
   },
   {
-    name: "Testing & quality",
-    skills: ["Automated testing", "API testing", "Code review", "Debugging", "Data quality", "Model evaluation"],
+    name: "Technical communication",
+    skills: ["Technical writing", "Regulatory submissions", "Scientific manuscripts", "Presentations", "Documentation standards", "Stakeholder communication", "Mentoring"],
   },
 ];
 
-function ProjectVisual({ type }) {
+const experience = [
+  {
+    role: "Senior DevOps Engineer",
+    company: "Marovi",
+    period: "Dec 2025 – Jun 2026",
+    focus: "AWS infrastructure & CI/CD",
+    highlights: [
+      "Provisioned repeatable AWS environments with modular Terraform across VPC, RDS, EKS, Prometheus, Grafana, and ArgoCD.",
+      "Built GitHub Actions pipelines with code-quality gates, automated deployments, and security best practices.",
+    ],
+  },
+  {
+    role: "Tools & Automation Engineer",
+    company: "Game Seven Staffing",
+    period: "Mar 2025 – Feb 2026",
+    focus: "Testing, QA automation & CI/CD",
+    highlights: [
+      "Validated Python and C++ software with structured debugging, pytest, unit and integration tests, and custom harnesses.",
+      "Automated testing and security-testing workflows to reduce manual QA effort; maintained CI/CD pipelines across teams.",
+      "Documented decisions clearly in Jira and Slack in a remote, asynchronous environment.",
+    ],
+  },
+  {
+    role: "Senior Full-Stack Developer / Data Engineer",
+    company: "QuantumNest Global",
+    period: "Jan 2023 – Feb 2025",
+    focus: "Data pipelines, quality enforcement & AI evaluation",
+    highlights: [
+      "Integrated OpenAI and Claude APIs; evaluated output accuracy and correctness and documented recurring error patterns.",
+      "Created a Python GitHub bot enforcing code-review and security standards before merge.",
+      "Built Pandas, PySpark, and Databricks ETL pipelines; developed source-document parsers and validation checks.",
+      "Developed multithreaded Python ingestion and database-refresh jobs, monitoring runs and resolving failures.",
+    ],
+  },
+  {
+    role: "Business System Analyst / AI & Data Engineer",
+    company: "Amgen",
+    period: "Dec 2022 – Apr 2024",
+    focus: "Production ML, MLOps & multimodal AI",
+    highlights: [
+      "Built predictive models in TensorFlow and PyTorch and evaluated them against held-out data before deployment.",
+      "Developed a real-time computer-vision system using multimodal LLMs and prompt engineering.",
+      "Automated ETL and model-deployment workflows with Apache Airflow; built recommendation, propensity, and in-app search systems.",
+      "Translated model results into clear recommendations for product and marketing stakeholders.",
+    ],
+  },
+  {
+    role: "Senior AI Scientist",
+    company: "Analytics 4 Life",
+    period: "Dec 2019 – Apr 2022",
+    focus: "Production ML in an FDA-regulated environment",
+    highlights: [
+      "Led development of a Python and C++ application predicting cardiac disease from non-invasive ECG/PPG signals, from data collection through AWS deployment and monitoring; the work supports pending US and international patents.",
+      "Designed anomaly-detection algorithms for noisy physiological time series and validated results on imperfect data.",
+      "Improved inference performance of a production AWS model by 60% through parallelization and algorithmic optimization.",
+      "Authored FDA submission reports and scientific manuscripts; reviewed colleagues’ models and code against quality, correctness, and documentation standards.",
+      "Mentored junior data scientists, contributed to hiring decisions, and presented model capabilities to non-technical audiences.",
+    ],
+  },
+];
+
+function ProjectVisual({ type, image, imageAlt, imageLabel }) {
+  if (image) {
+    return (
+      <div className="project-visual project-visual--photo">
+        <Image
+          alt={imageAlt}
+          className="project-cover-image"
+          fill
+          sizes="(max-width: 760px) 100vw, 50vw"
+          src={image}
+        />
+        <span className="project-image-label">{imageLabel}</span>
+      </div>
+    );
+  }
+
   return (
     <div className={`project-visual project-visual--${type}`} aria-hidden="true">
       <div className="visual-header">
@@ -312,23 +390,24 @@ export default function Home() {
       <main id="main">
         <section className="hero section-shell" id="top" aria-labelledby="hero-title">
           <div className="hero-copy">
-            <p className="eyebrow"><span className="status-dot" /> Software · Data · Applied AI</p>
+            <p className="eyebrow"><span className="status-dot" /> Daniel Cheseny Samoei · Nairobi, Kenya</p>
             <div className="hero-role-list" aria-label="Professional focus areas">
-              <span>AI Rating</span>
-              <span>Machine Learning</span>
-              <span>Data Analyst</span>
+              <span>Software Engineer</span>
+              <span>ML Scientist</span>
+              <span>Physicist</span>
             </div>
             <h1 id="hero-title">
-              I build useful
+              I build,
               <br />
-              technology for
+              test & evaluate
               <br />
-              <span>real-world work.</span>
+              <span>what matters.</span>
             </h1>
             <p className="hero-intro">
-              I&apos;m Daniel Samoei — a full-stack developer and data
-              professional focused on practical software, thoughtful analytics,
-              and AI systems that earn their place.
+              Software engineer, machine learning scientist, and physicist
+              with 8+ years of Python and C++ development. I build and review
+              production software, evaluate AI outputs, and explain complex
+              technical results with care.
             </p>
             <div className="hero-actions">
               <a className="button button-primary" href="#work">
@@ -360,12 +439,12 @@ export default function Home() {
               />
             </div>
             <span className="orbit-label orbit-label--software">SOFTWARE</span>
-            <span className="orbit-label orbit-label--data">DATA</span>
-            <span className="orbit-label orbit-label--ai">APPLIED AI</span>
+            <span className="orbit-label orbit-label--data">PHYSICS</span>
+            <span className="orbit-label orbit-label--ai">MACHINE LEARNING</span>
             <span className="hero-coordinate">01 / 03</span>
           </div>
           <div className="hero-bottom">
-            <span>ENGINEERING THAT CONNECTS THE DOTS</span>
+            <span>AI MODEL EVALUATION · CODE REVIEW · TECHNICAL REASONING</span>
             <a href="#about">Scroll to explore <span aria-hidden="true">↓</span></a>
           </div>
         </section>
@@ -380,22 +459,25 @@ export default function Home() {
             </h2>
             <div className="intro-columns">
               <p>
-                My work sits between software engineering, business analysis,
-                and data. I like getting close to the problem, understanding
-                what a useful outcome looks like, and building a thoughtful path
-                from idea to working solution.
+                With 8+ years of Python and C++ development and an M.Sc. in
+                Physics, I bring software engineering, machine learning, and
+                experimental reasoning together. My work includes evaluating
+                OpenAI and Claude API outputs, reviewing code against quality
+                standards, and testing models against held-out data.
               </p>
               <p>
-                Whether I&apos;m shaping an API, checking a dataset, or
-                evaluating an AI system, I care about the same things: sound
-                assumptions, clear feedback, maintainable decisions, and
-                technology that solves a practical need.
+                I have authored FDA submission reports and scientific
+                manuscripts, improved production-model inference speed by 60%,
+                and explained technical results to regulators, engineers, and
+                non-technical stakeholders. I work fluently in English and am
+                comfortable collaborating remotely and asynchronously.
               </p>
             </div>
             <div className="intro-role-list" aria-label="Core professional roles">
-              <span>AI Rating</span>
+              <span>AI Model Evaluation</span>
+              <span>AI Rating & Code Review</span>
               <span>Machine Learning</span>
-              <span>Data Analyst</span>
+              <span>Data & Signal Analysis</span>
             </div>
           </div>
         </section>
@@ -414,7 +496,12 @@ export default function Home() {
           <div className="project-grid">
             {projects.map((project) => (
               <article className="project-card" key={project.number}>
-                <ProjectVisual type={project.visual} />
+                <ProjectVisual
+                  type={project.visual}
+                  image={project.image}
+                  imageAlt={project.imageAlt}
+                  imageLabel={project.imageLabel}
+                />
                 <div className="project-content">
                   <div className="project-meta">
                     <span className={`project-status project-status--${project.statusType}`}>
@@ -482,46 +569,30 @@ export default function Home() {
         </section>
 
         <section className="experience-section section-shell" id="experience" aria-labelledby="experience-title">
-          <div className="section-index"><span>04</span> / PROFESSIONAL FOCUS</div>
+          <div className="section-index"><span>04</span> / EXPERIENCE</div>
           <div className="experience-layout">
             <div className="experience-heading">
-              <h2 id="experience-title">From the question to the <span>quality check.</span></h2>
+              <h2 id="experience-title">Evidence-led work, from <span>research to release.</span></h2>
               <p>
-                My experience spans business analysis, software engineering,
-                data processing, technical evaluation, and quality assurance.
-                I bring those perspectives together rather than treating them
-                as separate handoffs.
+                Across AI research, regulated machine learning, data platforms,
+                and cloud delivery, I focus on correctness, reproducibility,
+                and clear communication. Dates and descriptions below reflect
+                the experience provided in my profile.
               </p>
             </div>
             <div className="experience-list">
-              <article>
-                <span>01</span>
-                <div>
-                  <h3>Frame the problem</h3>
-                  <p>Translate a business need into clear requirements, useful measures, and a buildable plan.</p>
-                </div>
-              </article>
-              <article>
-                <span>02</span>
-                <div>
-                  <h3>Build with context</h3>
-                  <p>Connect application logic, data flows, and user needs into solutions that are understandable and maintainable.</p>
-                </div>
-              </article>
-              <article>
-                <span>03</span>
-                <div>
-                  <h3>Check what matters</h3>
-                  <p>Validate inputs, test important behaviors, and evaluate whether a system is doing what it claims.</p>
-                </div>
-              </article>
-              <article>
-                <span>04</span>
-                <div>
-                  <h3>Keep learning</h3>
-                  <p>Stay curious about new tools while grounding decisions in evidence, constraints, and real use.</p>
-                </div>
-              </article>
+              {experience.map((job, index) => (
+                <article key={`${job.company}-${job.role}`}>
+                  <span>{String(index + 1).padStart(2, "0")}</span>
+                  <div>
+                    <h3>{job.role} <span className="experience-company">· {job.company}</span></h3>
+                    <p className="experience-meta">{job.period} · {job.focus}</p>
+                    <ul>
+                      {job.highlights.map((highlight) => <li key={highlight}>{highlight}</li>)}
+                    </ul>
+                  </div>
+                </article>
+              ))}
             </div>
           </div>
         </section>
@@ -529,15 +600,35 @@ export default function Home() {
         <section className="credentials-section section-shell" id="credentials" aria-labelledby="credentials-title">
           <div className="section-index"><span>05</span> / EDUCATION & CERTIFICATIONS</div>
           <div className="credentials-card">
-            <div>
-              <p className="section-kicker">A note on credentials</p>
-              <h2 id="credentials-title">Verified details, <span>when ready.</span></h2>
+            <div className="credential-block">
+              <p className="section-kicker">Education</p>
+              <h2 id="credentials-title">Built on science, <span>applied with purpose.</span></h2>
+              <article className="credential-item">
+                <h3>M.Sc. Physics</h3>
+                <p>University of Nairobi · 2021–2024</p>
+                <p>Computational physics, optics, photonics, laser spectroscopy (LIBS, Raman), scientific computing, OptiSystem simulation, PCA, PLSR, and neural networks on high-dimensional data using Python and MATLAB.</p>
+              </article>
+              <article className="credential-item">
+                <h3>B.Sc. Physics</h3>
+                <p>Moi University · 2014–2019</p>
+                <p>Mathematics, mechanics, electromagnetism, electronics, and numerical methods.</p>
+              </article>
             </div>
-            <p>
-              Education and certifications are intentionally not listed until
-              verified details are available. This section is ready to update
-              with accurate qualifications.
-            </p>
+            <div className="credential-details">
+              <div>
+                <p className="section-kicker">Certifications & training</p>
+                <ul>
+                  <li>IBM Data Analyst Professional Certificate · Coursera / IBM</li>
+                  <li>Applied Data Science Lab · WorldQuant University</li>
+                  <li>TEFL certificate · English curriculum</li>
+                </ul>
+              </div>
+              <div>
+                <p className="section-kicker">Languages</p>
+                <p>English — fluent (speaking, reading, writing)</p>
+                <p>Swahili — proficiency not specified in the supplied profile</p>
+              </div>
+            </div>
           </div>
         </section>
 
@@ -547,16 +638,20 @@ export default function Home() {
             <p className="section-kicker">Have a thoughtful problem to solve?</p>
             <h2 id="contact-title">Let&apos;s make something <span>useful.</span></h2>
             <p className="contact-copy">
-              Reach out about software, data, applied AI, or a collaboration.
+              Open to remote opportunities in AI model evaluation, code review,
+              software engineering, machine learning, and technical research.
+              Based in Nairobi, Kenya.
             </p>
             <a className="button button-primary contact-button" href="mailto:dscheseny@gmail.com">
               Email Daniel <span aria-hidden="true">↗</span>
             </a>
+            <a className="contact-phone" href="tel:+254797844624">+254 797 844 624</a>
             <div className="contact-links">
               <ExternalLink href="https://github.com/cheseny1996">GitHub ↗</ExternalLink>
               <ExternalLink href="https://www.linkedin.com/in/daniel-samoei-638307164/">
                 LinkedIn ↗
               </ExternalLink>
+              <ExternalLink href="mailto:dscheseny@gmail.com">dscheseny@gmail.com ↗</ExternalLink>
             </div>
           </div>
           <div className="contact-orbit" aria-hidden="true"><span>DS</span></div>
@@ -568,7 +663,7 @@ export default function Home() {
           <span className="brand-mark">DS</span>
           <span className="brand-name">Daniel Samoei</span>
         </a>
-        <p>Software, data, and AI — applied with intention.</p>
+        <p>AI model evaluation · software engineering · physics</p>
         <span>© {new Date().getFullYear()} Daniel Samoei</span>
       </footer>
     </>

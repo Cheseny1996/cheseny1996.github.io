@@ -4,9 +4,9 @@ const siteUrl = "https://cheseny1996.github.io";
 
 export const metadata = {
   metadataBase: new URL(siteUrl),
-  title: "Daniel Samoei | Software, Data & Applied AI",
+  title: "Daniel Cheseny Samoei | Software Engineer, ML Scientist & Physicist",
   description:
-    "Daniel Samoei is a full-stack software developer and data professional building practical software, thoughtful analytics, and useful AI systems.",
+    "Daniel Cheseny Samoei is a software engineer, machine learning scientist, and physicist specializing in AI model evaluation, code review, testing, and production machine learning.",
   applicationName: "Daniel Samoei Portfolio",
   alternates: {
     canonical: "/",
@@ -16,23 +16,23 @@ export const metadata = {
     locale: "en_US",
     url: siteUrl,
     siteName: "Daniel Samoei",
-    title: "Daniel Samoei | Software, Data & Applied AI",
+    title: "Daniel Cheseny Samoei | Software Engineer, ML Scientist & Physicist",
     description:
-      "Practical software, thoughtful analytics, and AI systems that earn their place.",
+      "AI model evaluation, code review, software engineering, and machine learning grounded in physics and rigorous testing.",
     images: [
       {
         url: "/og-image.png",
         width: 1200,
         height: 630,
-        alt: "Daniel Samoei — software, data, and applied AI",
+        alt: "Daniel Cheseny Samoei — software engineer, machine learning scientist, and physicist",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Daniel Samoei | Software, Data & Applied AI",
+    title: "Daniel Cheseny Samoei | Software Engineer, ML Scientist & Physicist",
     description:
-      "Practical software, thoughtful analytics, and AI systems that earn their place.",
+      "AI model evaluation, code review, software engineering, and machine learning grounded in physics and rigorous testing.",
     images: ["/og-image.png"],
   },
   robots: {
