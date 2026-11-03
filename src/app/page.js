@@ -329,6 +329,25 @@ const experience = [
 
 const physicsCourseYears = [
   {
+    year: "Year I · 2015/2016",
+    courses: [
+      ["BOT 110", "Basic Botany I", 3],
+      ["BOT 111", "Basic Botany II", 3],
+      ["CHE 110", "Basic Chemistry I", 4],
+      ["CHE 111", "Basic Chemistry II", 4],
+      ["IRD 100", "Communication Skills I", 3],
+      ["IRD 102", "Communication Skills II", 3],
+      ["IRD 101", "Quantitative Skills I", 3],
+      ["IRD 104", "Development Concepts and Its Application", 3],
+      ["MAT 110", "Basic Calculus", 3],
+      ["MAT 111", "Chemistry and Elementary Applied Mathematics", 4],
+      ["PHY 110", "Basic Physics I", 4],
+      ["PHY 111", "Basic Physics II", 3],
+      ["ZOO 110", "Basic Zoology I", 3],
+      ["ZOO 111", "Basic Zoology II", 4],
+    ],
+  },
+  {
     year: "Year II · 2016/2017",
     courses: [
       ["COM 210", "Introduction to Computer Science", 3],
