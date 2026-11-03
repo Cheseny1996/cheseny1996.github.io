@@ -1834,6 +1834,15 @@ summary:focus-visible {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
+  .experience-list article:last-child {
+    grid-column: 1 / -1;
+  }
+
+  .experience-list article:last-child ul {
+    columns: 2;
+    column-gap: 32px;
+  }
+
   .visual-disclaimer {
     font-size: 0.38rem;
   }
@@ -2007,7 +2016,15 @@ summary:focus-visible {
     grid-column: auto;
   }
 
+  .experience-list article:last-child {
+    grid-column: auto;
+  }
+
   .experience-list article:first-child ul {
+    columns: 1;
+  }
+
+  .experience-list article:last-child ul {
     columns: 1;
   }
 
