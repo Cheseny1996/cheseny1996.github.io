@@ -1424,10 +1424,16 @@ summary:focus-visible {
 }
 
 .experience-layout {
-  display: grid;
-  gap: 9vw;
-  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+  display: block;
   margin-top: 23px;
+}
+
+.experience-heading {
+  align-items: end;
+  display: grid;
+  gap: 8vw;
+  grid-template-columns: minmax(0, 1.1fr) minmax(250px, 0.9fr);
+  margin-bottom: 34px;
 }
 
 .experience-heading h2 {
@@ -1438,16 +1444,31 @@ summary:focus-visible {
   color: #9ca69e;
   font-size: 0.82rem;
   line-height: 1.8;
-  margin: 22px 0 0;
+  margin: 0 0 5px;
   max-width: 445px;
+}
+
+.experience-list {
+  display: grid;
+  gap: 0 30px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
 .experience-list article {
   border-bottom: 1px solid #303a35;
   display: grid;
-  gap: 18px;
-  grid-template-columns: 28px 1fr;
-  padding: 18px 0 20px;
+  gap: 12px;
+  grid-template-columns: 24px minmax(0, 1fr);
+  padding: 16px 0 18px;
+}
+
+.experience-list article:first-child {
+  grid-column: 1 / -1;
+}
+
+.experience-list article:first-child ul {
+  columns: 2;
+  column-gap: 32px;
 }
 
 .experience-list article:first-child {
@@ -1501,6 +1522,10 @@ summary:focus-visible {
 .experience-list li + li,
 .credential-details li + li {
   margin-top: 6px;
+}
+
+.experience-list li {
+  break-inside: avoid;
 }
 
 .credentials-section {
@@ -1805,6 +1830,10 @@ summary:focus-visible {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
+  .experience-list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
   .visual-disclaimer {
     font-size: 0.38rem;
   }
@@ -1958,8 +1987,28 @@ summary:focus-visible {
   }
 
   .experience-layout {
-    gap: 37px;
+    margin-top: 20px;
+  }
+
+  .experience-heading {
+    display: block;
+    margin-bottom: 24px;
+  }
+
+  .experience-heading > p {
+    margin-top: 18px;
+  }
+
+  .experience-list {
     grid-template-columns: 1fr;
+  }
+
+  .experience-list article:first-child {
+    grid-column: auto;
+  }
+
+  .experience-list article:first-child ul {
+    columns: 1;
   }
 
   .credentials-card {
