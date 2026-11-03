@@ -15,6 +15,22 @@ const projects = [
       "A Python pipeline calculates invoice aging and DSO, then produces a visual report and a formula-driven Excel dashboard.",
     stack: ["Python", "Pandas", "Matplotlib", "Excel"],
     visual: "ledger",
+    codePreview: {
+      file: "payment_cycle_tracker.py",
+      language: "PYTHON",
+      lineStart: 118,
+      href: "https://github.com/Cheseny1996/payment-cycle-tracker/blob/main/payment_cycle_tracker.py#L118-L125",
+      lines: [
+        "def summary_stats(df: pd.DataFrame) -> dict:",
+        '    paid = df[df["status"] == "Paid"]',
+        '    open_ = df[df["status"] == "Open"]',
+        "    return {",
+        '        "total_invoices": len(df),',
+        '        "total_billed": round(df["amount"].sum(), 2),',
+        '        "open_ar_balance": round(open_["amount"].sum(), 2),',
+        '        "avg_days_to_pay": round(paid["days_to_pay"].mean(), 1),',
+      ],
+    },
     repository: "https://github.com/Cheseny1996/payment-cycle-tracker",
   },
   {
@@ -29,6 +45,22 @@ const projects = [
       "A reusable model calculates CAC, LTV, payback, margins, and Bear / Base / Bull scenarios in a CEO-ready workbook.",
     stack: ["Python", "Pandas", "NumPy", "Excel"],
     visual: "scenarios",
+    codePreview: {
+      file: "unit_economics_model.py",
+      language: "PYTHON",
+      lineStart: 93,
+      href: "https://github.com/Cheseny1996/unit-economics-model/blob/main/unit_economics_model.py#L93-L100",
+      lines: [
+        "    # CAC — sales & marketing spend / new customers acquired",
+        '    df["cac"] = (df["sales_marketing_spend"] * scenario_mult["cac_mult"]) / df["new_customers"]',
+        "",
+        "    # LTV — ARPU / churn rate  (simple LTV formula)",
+        '    df["ltv"] = df["arpu"] / df["churn"]',
+        "",
+        "    # LTV:CAC ratio",
+        '    df["ltv_cac"] = df["ltv"] / df["cac"]',
+      ],
+    },
     repository: "https://github.com/Cheseny1996/unit-economics-model",
   },
   {
@@ -43,6 +75,21 @@ const projects = [
       "An empirical experiment compares conventional evaluation with drift-aware signals to study when model quality can degrade quietly.",
     stack: ["Python", "Machine learning", "Evaluation"],
     visual: "signals",
+    codePreview: {
+      file: "silent_failure_experiment.py",
+      language: "PYTHON",
+      lineStart: 180,
+      href: "https://github.com/Cheseny1996/silent-failures-production-ml/blob/main/silent_failure_experiment.py#L180-L186",
+      lines: [
+        "    # 1. Population Stability Index (PSI) — standard drift metric",
+        "    psi_scores = []",
+        "    for i in range(X_current.shape[1]):",
+        "        psi = compute_psi(X_baseline[:, i], X_current[:, i])",
+        "        psi_scores.append(psi)",
+        "    mean_psi = np.mean(psi_scores)",
+        "    max_psi  = np.max(psi_scores)",
+      ],
+    },
     repository: "https://github.com/Cheseny1996/silent-failures-production-ml",
   },
   {
@@ -70,6 +117,20 @@ const projects = [
       "Implemented secure Supabase authentication, private user workspaces, CSV validation and imports, database migrations, responsive dashboards, tests, and a documented Next.js application.",
     stack: ["Next.js", "TypeScript", "Supabase", "PostgreSQL"],
     visual: "workspace",
+    codePreview: {
+      file: "lib/analytics/metrics.ts",
+      language: "TYPESCRIPT",
+      lineStart: 12,
+      href: "https://github.com/Cheseny1996/analytics-workspace/blob/main/lib/analytics/metrics.ts#L12-L17",
+      lines: [
+        "  return {",
+        "    ...totals,",
+        "    conversionRate: totals.sessions ? (totals.conversions / totals.sessions) * 100 : 0,",
+        "    averageOrderValue: totals.conversions ? totals.revenue / totals.conversions : 0,",
+        "  };",
+        "}",
+      ],
+    },
     repository: "https://github.com/Cheseny1996/analytics-workspace",
   },
   {
@@ -84,6 +145,22 @@ const projects = [
       "Built secure document ingestion, retrieval, source citations, optional AI-provider integration, private Supabase storage, and explicit failure and evaluation paths.",
     stack: ["Python", "LLMs", "RAG", "Evaluation"],
     visual: "knowledge",
+    codePreview: {
+      file: "lib/retrieval.ts",
+      language: "TYPESCRIPT",
+      lineStart: 40,
+      href: "https://github.com/Cheseny1996/applied-ai-knowledge-assistant/blob/main/lib/retrieval.ts#L40-L47",
+      lines: [
+        "    .map((chunk) => {",
+        "      const words = terms(chunk.content);",
+        "      const wordSet = new Set(words);",
+        "      const matched = queryTerms.filter((term) => wordSet.has(term));",
+        "      const score = matched.length / Math.sqrt(Math.max(words.length, 1));",
+        "      return { chunk, score, matched: matched.length };",
+        "    })",
+        "    .filter((result) => result.matched > 0)",
+      ],
+    },
     repository: "https://github.com/Cheseny1996/applied-ai-knowledge-assistant",
   },
   {
@@ -98,6 +175,22 @@ const projects = [
       "Implemented a Next.js workspace with automated checks, structured test results, validation rules, reusable quality views, and Vitest coverage for the evaluation workflow.",
     stack: ["Next.js", "TypeScript", "Vitest", "Data quality", "Evaluation"],
     visual: "quality",
+    codePreview: {
+      file: "src/lib/evaluation.ts",
+      language: "TYPESCRIPT",
+      lineStart: 14,
+      href: "https://github.com/Cheseny1996/quality-evaluation-workbench/blob/main/src/lib/evaluation.ts#L14-L21",
+      lines: [
+        "function overlapScore(source: string, candidate: string): number {",
+        "  const expected = new Set(tokens(source));",
+        "  const actual = new Set(tokens(candidate));",
+        "  if (expected.size === 0 || actual.size === 0) return 0;",
+        "  let common = 0;",
+        "  for (const token of actual) if (expected.has(token)) common += 1;",
+        "  return Math.round((2 * common / (expected.size + actual.size)) * 100);",
+        "}",
+      ],
+    },
     repository: "https://github.com/Cheseny1996/quality-evaluation-workbench",
   },
   {
@@ -234,7 +327,33 @@ const experience = [
   },
 ];
 
-function ProjectVisual({ type, image, imageAlt, imageLabel }) {
+const codeTokenPattern =
+  /(#.*|\/\/.*|"(?:\\.|[^"\\])*"|'(?:\\.|[^'\\])*'|`(?:\\.|[^`\\])*`|\b(?:async|await|const|def|else|export|for|from|function|if|import|in|let|new|return|throw|type|while)\b|\b\d+(?:\.\d+)?\b)/g;
+const codeKeywords = new Set(
+  "async await const def else export for from function if import in let new return throw type while"
+    .split(" "),
+);
+
+function highlightCodeLine(line) {
+  return line.split(codeTokenPattern).filter(Boolean).map((token, index) => {
+    let className = "";
+    if (token.startsWith("#") || token.startsWith("//")) {
+      className = "code-token--comment";
+    } else if (/^["'`]/.test(token)) {
+      className = "code-token--string";
+    } else if (/^\d/.test(token)) {
+      className = "code-token--number";
+    } else if (codeKeywords.has(token)) {
+      className = "code-token--keyword";
+    }
+
+    return className
+      ? <span className={className} key={index}>{token}</span>
+      : token;
+  });
+}
+
+function ProjectVisual({ type, image, imageAlt, imageLabel, codePreview }) {
   if (image) {
     return (
       <div className="project-visual project-visual--photo">
@@ -246,6 +365,40 @@ function ProjectVisual({ type, image, imageAlt, imageLabel }) {
           src={image}
         />
         <span className="project-image-label">{imageLabel}</span>
+      </div>
+    );
+  }
+
+  if (codePreview) {
+    return (
+      <div className="project-visual project-visual--code">
+        <div className="code-editor">
+          <div className="code-editor__header">
+            <span className="code-editor__traffic" aria-hidden="true">
+              <i /><i /><i />
+            </span>
+            <span className="code-editor__file">{codePreview.file}</span>
+            <span className="code-editor__language">{codePreview.language}</span>
+          </div>
+          <ol className="code-editor__lines" aria-label={`${codePreview.file} source excerpt`}>
+            {codePreview.lines.map((line, index) => (
+              <li key={`${codePreview.lineStart + index}-${line}`}>
+                <span className="code-editor__line-number" aria-hidden="true">
+                  {codePreview.lineStart + index}
+                </span>
+                <code>{highlightCodeLine(line)}</code>
+              </li>
+            ))}
+          </ol>
+          <div className="code-editor__footer">
+            <span>
+              SOURCE EXCERPT · L{codePreview.lineStart}–L{codePreview.lineStart + codePreview.lines.length - 1}
+            </span>
+            <ExternalLink className="code-editor__source" href={codePreview.href}>
+              View source <span aria-hidden="true">↗</span>
+            </ExternalLink>
+          </div>
+        </div>
       </div>
     );
   }
@@ -501,6 +654,7 @@ export default function Home() {
                   image={project.image}
                   imageAlt={project.imageAlt}
                   imageLabel={project.imageLabel}
+                  codePreview={project.codePreview}
                 />
                 <div className="project-content">
                   <div className="project-meta">
