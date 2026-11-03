@@ -135,11 +135,15 @@ const projects = [
 const skillGroups = [
   {
     name: "Frontend",
-    skills: ["React", "Next.js", "TypeScript", "Tailwind CSS", "Accessible UI"],
+    skills: ["JavaScript", "TypeScript", "React", "Next.js", "Tailwind CSS", "Accessible UI"],
   },
   {
     name: "Backend & APIs",
-    skills: ["Python", "FastAPI", "Django", "Node.js", "Express", "REST APIs"],
+    skills: ["Python", "Go", "Node.js", "FastAPI", "Django", "Express", "REST APIs"],
+  },
+  {
+    name: "Go & distributed systems",
+    skills: ["Go", "Concurrency", "Distributed systems", "System design"],
   },
   {
     name: "Databases",
@@ -155,15 +159,15 @@ const skillGroups = [
   },
   {
     name: "AI & machine learning",
-    skills: ["PyTorch", "TensorFlow", "Hugging Face", "LLMs", "RAG", "Evaluation"],
+    skills: ["PyTorch", "TensorFlow", "Hugging Face", "LLMs", "RAG", "AI code review", "AI output evaluation"],
   },
   {
     name: "Cloud & DevOps",
-    skills: ["AWS", "Azure", "Docker", "Git", "GitHub Actions", "CI/CD"],
+    skills: ["AWS", "Azure", "Docker", "Kubernetes", "Git", "GitHub Actions", "CI/CD"],
   },
   {
     name: "Testing & quality",
-    skills: ["Automated testing", "API testing", "Data quality", "Model evaluation"],
+    skills: ["Automated testing", "API testing", "Code review", "Debugging", "Data quality", "Model evaluation"],
   },
 ];
 
