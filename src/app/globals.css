@@ -1502,6 +1502,99 @@ summary:focus-visible {
   font-size: 0.61rem;
 }
 
+.physics-coursework {
+  margin-top: 32px;
+}
+
+.coursework-note {
+  color: #89968c;
+  font-size: 0.68rem;
+  line-height: 1.65;
+  margin: 7px 0 15px;
+}
+
+.course-year {
+  border-top: 1px solid #364039;
+}
+
+.course-year:last-child {
+  border-bottom: 1px solid #364039;
+}
+
+.course-year summary {
+  align-items: center;
+  color: #dce4dc;
+  cursor: pointer;
+  display: flex;
+  font-size: 0.72rem;
+  gap: 12px;
+  justify-content: space-between;
+  list-style: none;
+  min-height: 45px;
+}
+
+.course-year summary::-webkit-details-marker {
+  display: none;
+}
+
+.course-year summary::after {
+  color: #c1fa78;
+  content: "+";
+  font-size: 1rem;
+  order: 1;
+}
+
+.course-year[open] summary::after {
+  content: "−";
+}
+
+.course-year summary span:last-of-type {
+  color: #89968c;
+  font-family: var(--font-mono);
+  font-size: 0.54rem;
+  margin-left: auto;
+  white-space: nowrap;
+}
+
+.course-year ul {
+  border-top: 1px solid #29342d;
+  display: grid;
+  gap: 0 13px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  list-style: none;
+  margin: 0;
+  padding: 8px 0 12px;
+}
+
+.course-year li {
+  align-items: baseline;
+  border-bottom: 1px solid rgb(54 64 57 / 55%);
+  display: grid;
+  gap: 5px;
+  grid-template-columns: 53px minmax(0, 1fr);
+  padding: 7px 0;
+}
+
+.course-code {
+  color: #c1fa78;
+  font-family: var(--font-mono);
+  font-size: 0.52rem;
+  white-space: nowrap;
+}
+
+.course-title {
+  color: #b7c1b8;
+  font-size: 0.61rem;
+  line-height: 1.45;
+}
+
+.course-units {
+  color: #7f8d83;
+  font-family: var(--font-mono);
+  font-size: 0.49rem;
+  grid-column: 2;
+}
+
 .credential-details {
   display: grid;
   gap: 30px;
@@ -1825,6 +1918,10 @@ summary:focus-visible {
 
   .credential-details {
     padding-top: 0;
+  }
+
+  .course-year ul {
+    grid-template-columns: 1fr;
   }
 
   .contact-section {

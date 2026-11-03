@@ -327,6 +327,66 @@ const experience = [
   },
 ];
 
+const physicsCourseYears = [
+  {
+    year: "Year II · 2016/2017",
+    courses: [
+      ["COM 210", "Introduction to Computer Science", 3],
+      ["IRD 200", "State, Society and Development", 3],
+      ["MAT 210", "Calculus", 3],
+      ["MAT 211", "Calculus and Analytical Geometry", 3],
+      ["MAT 212", "Linear Algebra I", 3],
+      ["MAT 213", "Linear Algebra II", 3],
+      ["MAT 214", "Vector Analysis", 3],
+      ["MAT 215", "Classical Mechanics", 3],
+      ["PHY 210", "Electricity and Magnetism", 3],
+      ["PHY 211", "Vibration and Waves", 3],
+      ["PHY 212", "Modern Physics", 4],
+      ["PHY 213", "Electronics I", 3],
+      ["STA 210", "Statistics and Probability I", 3],
+      ["STA 211", "Statistics and Probability II", 3],
+    ],
+  },
+  {
+    year: "Year III · 2017/2018",
+    courses: [
+      ["COM 310", "Computer Programming", 3],
+      ["MAT 312", "Complex Analysis", 3],
+      ["MAT 313", "Abstract Algebra", 3],
+      ["MAT 314", "Ordinary Differential Equations", 3],
+      ["MAT 316", "Methods", 3],
+      ["MAT 317", "Numerical Analysis I", 3],
+      ["MAT 319", "Advanced Calculus", 3],
+      ["PHY 310", "Mathematical Physics", 3],
+      ["PHY 311", "Solid State Physics II", 3],
+      ["PHY 312", "Optics", 3],
+      ["PHY 313", "Electronics II", 3],
+      ["PHY 314", "Quantum Mechanics", 3],
+      ["PHY 316", "Introduction to Material Science", 3],
+      ["PHY 317", "Classical Mechanics II", 3],
+    ],
+  },
+  {
+    year: "Year IV · 2018/2019",
+    courses: [
+      ["COM 400", "Database Management", 3],
+      ["COM 410", "Project Appraisal", 3],
+      ["PHY 410", "Quantum Mechanics II", 3],
+      ["PHY 411", "Thermodynamics", 3],
+      ["PHY 412", "Workshop and Drawing", 3],
+      ["PHY 413", "Mathematical Physics II", 3],
+      ["PHY 414", "Solid State Physics III", 3],
+      ["PHY 415", "Statistical Mechanics", 3],
+      ["PHY 416", "Atomic and Nuclear Physics", 3],
+      ["PHY 419", "Research Project", 6],
+      ["PHY 420", "Renewable Energy", 3],
+      ["PHY 421", "Digital Electronics", 3],
+      ["PHY 429", "Introduction to Lasers", 3],
+      ["PHY 430", "Electronic Circuits and Microprocessors", 3],
+    ],
+  },
+];
+
 const codeTokenPattern =
   /(#.*|\/\/.*|"(?:\\.|[^"\\])*"|'(?:\\.|[^'\\])*'|`(?:\\.|[^`\\])*`|\b(?:async|await|const|def|else|export|for|from|function|if|import|in|let|new|return|throw|type|while)\b|\b\d+(?:\.\d+)?\b)/g;
 const codeKeywords = new Set(
@@ -612,8 +672,8 @@ export default function Home() {
             </h2>
             <div className="intro-columns">
               <p>
-                With 8+ years of Python and C++ development and an M.Sc. in
-                Physics, I bring software engineering, machine learning, and
+                With 8+ years of Python and C++ development and a Bachelor of
+                Science in Physics, I bring software engineering, machine learning, and
                 experimental reasoning together. My work includes evaluating
                 OpenAI and Claude API outputs, reviewing code against quality
                 standards, and testing models against held-out data.
@@ -758,15 +818,31 @@ export default function Home() {
               <p className="section-kicker">Education</p>
               <h2 id="credentials-title">Built on science, <span>applied with purpose.</span></h2>
               <article className="credential-item">
-                <h3>M.Sc. Physics</h3>
-                <p>University of Nairobi · 2021–2024</p>
-                <p>Computational physics, optics, photonics, laser spectroscopy (LIBS, Raman), scientific computing, OptiSystem simulation, PCA, PLSR, and neural networks on high-dimensional data using Python and MATLAB.</p>
-              </article>
-              <article className="credential-item">
                 <h3>B.Sc. Physics</h3>
                 <p>Moi University · 2014–2019</p>
-                <p>Mathematics, mechanics, electromagnetism, electronics, and numerical methods.</p>
+                <p>Physics degree covering mathematics, mechanics, electromagnetism, electronics, computation, and experimental research.</p>
               </article>
+              <div className="physics-coursework">
+                <p className="section-kicker">Transcript coursework & course units</p>
+                <p className="coursework-note">Selected course titles and unit counts from the academic records.</p>
+                {physicsCourseYears.map((year) => (
+                  <details className="course-year" key={year.year}>
+                    <summary>
+                      <span>{year.year}</span>
+                      <span>{year.courses.length} courses</span>
+                    </summary>
+                    <ul>
+                      {year.courses.map(([code, title, units]) => (
+                        <li key={code}>
+                          <span className="course-code">{code}</span>
+                          <span className="course-title">{title}</span>
+                          <span className="course-units">{units} units</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </details>
+                ))}
+              </div>
             </div>
             <div className="credential-details">
               <div>
