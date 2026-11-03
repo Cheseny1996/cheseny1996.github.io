@@ -640,6 +640,12 @@ export default function Home() {
               production software, evaluate AI outputs, and explain complex
               technical results with care.
             </p>
+            <ul className="hero-role-tags" aria-label="Professional roles">
+              <li>Senior Full-Stack, AI &amp; Data Engineer</li>
+              <li>Automation Engineer</li>
+              <li>Data Analyst</li>
+              <li>Technical Editor</li>
+            </ul>
             <div className="hero-actions">
               <a className="button button-primary" href="#work">
                 Explore selected work <span aria-hidden="true">↓</span>

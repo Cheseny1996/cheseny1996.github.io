@@ -287,6 +287,28 @@ summary:focus-visible {
   max-width: 500px;
 }
 
+.hero-role-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  list-style: none;
+  margin: 20px 0 0;
+  padding: 0;
+}
+
+.hero-role-tags li {
+  background: #1b241d;
+  border: 1px solid #394837;
+  border-radius: 999px;
+  color: #c6d0c5;
+  font-family: var(--font-mono);
+  font-size: 0.57rem;
+  letter-spacing: 0.035em;
+  line-height: 1.4;
+  padding: 8px 11px;
+  text-transform: uppercase;
+}
+
 .hero-actions {
   align-items: center;
   display: flex;
