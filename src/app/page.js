@@ -233,59 +233,58 @@ const projects = [
 
 const skillGroups = [
   {
-    name: "Programming & software",
-    skills: ["Python", "C++", "JavaScript", "TypeScript", "Go", "SQL", "MATLAB", "Node.js", "React", "Next.js", "REST APIs"],
+    name: "Full-stack & web",
+    skills: ["Python", "Flask", "FastAPI", "Django", "JavaScript", "TypeScript", "React", "Next.js", "Node.js", "Go", "REST APIs", "WebSockets", "Microservices", "MQTT", "Docker", "Secure application design"],
   },
   {
-    name: "Testing, review & AI evaluation",
-    skills: ["pytest", "Selenium", "Unit & integration testing", "Debugging", "Test automation", "Code review", "AI output evaluation & rating", "OpenAI & Claude APIs", "Prompt engineering", "Error-pattern analysis", "Model validation"],
+    name: "AI & machine learning",
+    skills: ["Predictive models", "Propensity models", "Recommendation systems", "Computer vision", "Multimodal LLMs", "Prompt engineering", "RAG", "TensorFlow", "PyTorch", "PCA", "PLSR", "Neural networks", "Anomaly detection", "Feature engineering"],
   },
   {
-    name: "Machine learning & analytics",
-    skills: ["TensorFlow", "PyTorch", "PCA", "PLSR", "Neural networks", "Anomaly detection", "Feature engineering", "Recommendation systems", "Propensity models", "Power BI", "Tableau", "Excel"],
+    name: "AI rating & evaluation",
+    skills: ["OpenAI API", "Claude API", "LLM output rating", "Accuracy & correctness review", "Reasoning and logical-soundness review", "Error and anti-pattern identification", "Structured failure-mode feedback", "Prompt engineering", "Model validation against held-out data"],
   },
   {
     name: "Data engineering",
-    skills: ["Pandas", "PySpark", "Databricks", "ETL", "Apache Airflow", "Data validation", "Pipeline design"],
+    skills: ["Pandas", "NumPy", "PySpark", "Databricks", "ETL & migration", "Database, S3, API & web-scraping ingestion", "PostgreSQL", "SQLAlchemy", "Amazon RDS", "Apache Airflow", "Data validation", "Pipeline design"],
   },
   {
-    name: "Cloud, systems & delivery",
-    skills: ["AWS (S3, EC2, EKS, RDS, CloudWatch)", "Terraform", "Docker", "Kubernetes", "ArgoCD", "Prometheus", "Grafana", "Git", "GitHub Actions", "CI/CD", "Concurrency", "Distributed systems"],
+    name: "Data analyst",
+    skills: ["SQL & Python analysis", "Data cleaning", "Data validation", "Statistical analysis", "Reporting", "Written findings for non-technical readers", "IBM Data Analyst Professional Certificate", "Power BI", "Tableau", "Excel"],
   },
   {
-    name: "Physics & signal processing",
-    skills: ["ECG/PPG time series", "Spectral analysis", "LIBS", "Raman spectroscopy", "Optics & photonics", "OptiSystem", "Statistical & numerical modeling"],
+    name: "Automation engineering",
+    skills: ["pytest test automation", "Automated security testing", "GitHub Actions", "CI/CD", "Apache Airflow orchestration", "GitHub bots", "Docker–MQTT integrations", "Python & C++ tooling", "asyncio", "Threading", "OOP"],
   },
   {
-    name: "Product engineering",
-    skills: ["TypeScript", "React", "Node.js", "Go", "MongoDB", "PostgreSQL", "Supabase", "Firebase", "Stripe", "M-Pesa", "Accessible UI", "System design"],
+    name: "Cloud & DevOps",
+    skills: ["AWS EC2", "AWS S3", "Amazon RDS", "Amazon EKS", "CloudWatch", "VPC", "Terraform", "Kubernetes", "ArgoCD", "Prometheus", "Grafana", "Docker", "Git", "GitHub Actions", "CI/CD"],
   },
   {
-    name: "Technical communication",
-    skills: ["Technical writing", "Regulatory submissions", "Scientific manuscripts", "Presentations", "Documentation standards", "Stakeholder communication", "Mentoring"],
+    name: "Testing & code review",
+    skills: ["Unit testing", "Integration testing", "Performance testing", "pytest", "C++ test harnesses", "Embedded Python/C++ validation", "Debugging", "Bug & edge-case analysis", "Structured code review", "Mentoring"],
+  },
+  {
+    name: "Editing & technical writing",
+    skills: ["Editing & proofreading", "Accuracy & consistency review", "Technical documentation", "Runbooks", "FDA submission reports", "Scientific manuscripts", "Jira & Slack documentation", "Stakeholder communication", "Presentations"],
   },
 ];
 
 const experience = [
   {
-    role: "Senior DevOps Engineer",
-    company: "Marovi",
-    period: "Dec 2025 – Jun 2026",
-    focus: "AWS infrastructure & CI/CD",
+    role: "AI Rater & Automation Engineer",
+    company: "Revelo",
+    period: "Mar 2025 – Jun 2026",
+    focus: "AI output rating, automation engineering, testing, CI/CD & cloud infrastructure",
     highlights: [
-      "Provisioned repeatable AWS environments with modular Terraform across VPC, RDS, EKS, Prometheus, Grafana, and ArgoCD.",
-      "Built GitHub Actions pipelines with code-quality gates, automated deployments, and security best practices.",
-    ],
-  },
-  {
-    role: "Tools & Automation Engineer",
-    company: "Game Seven Staffing",
-    period: "Mar 2025 – Feb 2026",
-    focus: "Testing, QA automation & CI/CD",
-    highlights: [
-      "Validated Python and C++ software with structured debugging, pytest, unit and integration tests, and custom harnesses.",
-      "Automated testing and security-testing workflows to reduce manual QA effort; maintained CI/CD pipelines across teams.",
-      "Documented decisions clearly in Jira and Slack in a remote, asynchronous environment.",
+      "Rated AI and LLM-generated outputs for accuracy, correctness, and reasoning quality; identified plausible-looking logical errors and anti-patterns and wrote structured feedback explaining corrections.",
+      "Validated embedded satellite software in Python and C++, debugging defects through unit and integration tests with pytest and custom C++ test harnesses.",
+      "Automated security-testing workflows to reduce manual QA effort and support critical project milestones.",
+      "Analyzed and refactored production Python code using asyncio, threading, and OOP to improve reliability, readability, and performance ahead of launch.",
+      "Built Docker–MQTT integrations and improved REST API functions, resolving GPS and networking issues before customer shipment.",
+      "Maintained CI/CD pipelines across teams and implemented GitHub Actions quality gates, automated deployments, and security practices.",
+      "Provisioned repeatable AWS VPC, RDS, and EKS environments using modular Terraform, with Prometheus, Grafana, and ArgoCD.",
+      "Documented decisions, fixes, and runbooks in Jira and Slack for a remote, asynchronous, cross-regional team.",
     ],
   },
   {
